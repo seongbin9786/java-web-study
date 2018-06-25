@@ -9,4 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- Servlet의 클래스와 그 클래스를 참조할 수 있도록 XML 내에서 사용될 이름을 정의한다. -->
+  <servlet>
+	  <servlet-name>HelloServlet</servlet-name>
+	  <servlet-class>sb.study.HelloServlet</servlet-class>
+  </servlet>
+  
+  <!-- Servlet의 이름과 URL 패턴을 정의한다. -->
+  <servlet-mapping>
+  	<servlet-name>HelloServlet</servlet-name>
+  	<url-pattern>/hello</url-pattern>
+  </servlet-mapping>
 </web-app>
