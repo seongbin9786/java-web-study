@@ -2,6 +2,12 @@
 
 ## 9부 - FrontController 패턴
 
+* [Properties를 사용한 Action 패턴 - 참고1](http://treasurebear.tistory.com/15)
+* [Properties를 사용한 Action 패턴 - 참고2](https://github.com/madvirus/jsp23/tree/master/webapps/chap18/WEB-INF/src/mvc)
+* 여기서 사용하는 패턴의 의미는 Action = Command 동일합니다.
+* 디자인 패턴 관점에선 Action 패턴은 따로 없고, Strategy 패턴이어야 하고, Command 패턴은 아닙니다.
+* Command 패턴은 execute()에 매개변수가 전달될 수 없기 때문입니다.
+
 1. `FrontController` 패턴은 하나의 서블릿에 모든 요청을 처리하도록 하고, 해당 서블릿은 요청을 처리할 `Action 객체`에 처리를 위임한다. 이 때 `service(req, res)` 메소드를 `override`하여 모든 Type의 HttpMethod에 대하여 처리하게 된다.
     ```java
         protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

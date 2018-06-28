@@ -13,8 +13,8 @@ public class ActionFactory {
 	private static Map<String, Action> actions = new HashMap<>();
 	
 	static {
-		actions.put("GET/index", new IndexAction());
-		actions.put("GET/error", new ErrorAction());
+		actions.put("GET/index.do", new IndexAction());
+		actions.put("GET/error.do", new ErrorAction());
 	}
 	
 	public static Action getAction(HttpServletRequest req) {
@@ -22,7 +22,7 @@ public class ActionFactory {
 		String path = req.getRequestURI().toString();
 		System.out.println("method: " + method + " path: " + path);
 		
-		String destination = method + path + ".do";		
+		String destination = method + path;		
 		return actions.get(destination);
 	}
 }
