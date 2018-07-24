@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<bean class="sb.study.spring.BeanUser" id="beanUser">
+		<property name="beanExample" ref="beanExample"></property>
+	</bean>
+	
+	<bean class="sb.study.spring.BeanExample" id="beanExample">
+		<constructor-arg value="XML에서 설정된 안녕하세요 메시지이다. Setter로 설정한 counter 값. 1씩 증가한다 =>" />
+		<property name="counter" value="10"></property>
+	</bean>
+</beans>
