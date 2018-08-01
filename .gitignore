@@ -14,3 +14,5 @@
 **/.classpath
 **/.settings/
 **/.loadpath
+*/bin/**
+*/build/**
