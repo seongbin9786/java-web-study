@@ -119,4 +119,6 @@
 
 ## Spring Beans
 
-1. 
+1. Spring에선 객체가 Spring에서 관리될 수도, 관리되지 않을 수도 있다.
+
+2. 
